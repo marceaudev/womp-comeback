@@ -1,46 +1,36 @@
-# womp-comeback
+# 🎬 Womp Comeback
 
-Womp womp
+**Womp Comeback** est un petit projet sans réel objectif commercial ni technique poussé — juste un espace pour me remettre dans le bain du développement après une longue pause à la fin de mes études.
 
-This template should help get you started developing with Vue 3 in Vite.
+Après cette pause, j’ai traversé une période de doute : l’arrivée fulgurante de l’IA dans le monde du dev m’a pas mal effrayé, au point de perdre progressivement la motivation de coder. Ce projet a donc un rôle particulier : celui de **réapprendre à prendre du plaisir à créer**, même si c’est simple, même si c’est “déjà vu”, même si ce n’est pas parfait.
 
-## Recommended IDE Setup
+## 🌱 Pourquoi ce projet ?
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Reprendre mes habitudes de développement
+- Retrouver la motivation après une période de doute face à l’évolution du métier
+- Me remettre doucement sur un setup moderne
+- Me donner un petit défi visuel sympa
 
-## Recommended Browser Setup
+Pas d’ambition folle, juste un retour tranquille.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## 🧩 Stack technique
 
-## Customize configuration
+- **Vue.js** — pour construire une interface front moderne et agréable
+- **OMDb API** — pour récupérer des informations (films, synopsis, images…)
+- **CSS** (ou Tailwind/Sass, selon la suite) — pour reproduire une esthétique “Netflix-like”
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🎨 Objectif
 
-## Project Setup
+Créer une **page d’accueil style Netflix** avec :
 
-```sh
+- affichage dynamique de films via OMDb
+- affiches / titres / synopsis
+- un design clean et agréable
+- un code simple, lisible et évolutif
+
+## 🚀 Installation & lancement
+
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
