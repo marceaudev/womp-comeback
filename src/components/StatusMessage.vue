@@ -17,6 +17,7 @@ defineProps({
 
 <style scoped>
 p {
+  text-align: center;
   color: var(--success-color);
 }
 

@@ -17,12 +17,12 @@ const logout = () => {
 <template>
   <nav>
     <div class="logo">
-      <h1>LOGO</h1>
+      <RouterLink to="/"><img src="../assets/imgs/womp.png" /></RouterLink>
     </div>
     <div class="navigation">
-      <RouterLink to="/" v-if="token">Home</RouterLink>
-      <RouterLink to="/login" v-else>Login</RouterLink>
-      <MainButton text="Logout" logout v-if="token" @click="logout" />
+      <RouterLink to="/" v-if="token">Accueil</RouterLink>
+      <RouterLink to="/login" v-else>Se connecter</RouterLink>
+      <MainButton text="Déconnexion" logout v-if="token" @click="logout" />
     </div>
   </nav>
 </template>
@@ -34,5 +34,15 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: var(--warm-beige);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 </style>

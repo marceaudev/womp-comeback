@@ -10,6 +10,7 @@
   --error-color: rgb(211, 69, 69);
   --success-color: rgb(66, 158, 66);
   --light-transparent: rgba(255, 255, 255, 0.1);
+  --dark-transparent: rgba(0, 0, 0, 0.35);
   --main-radius: 8px;
   --navbar-height: 60px;
   --page-height: calc(100vh - var(--navbar-height));
@@ -33,4 +34,14 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--warm-beige);
 }

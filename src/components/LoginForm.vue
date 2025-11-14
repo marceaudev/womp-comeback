@@ -9,7 +9,8 @@ const router = useRouter()
 
 const login = ref('')
 const pw = ref('')
-const error = ref(true)
+const error = ref(false)
+const logOk = ref(false)
 const statusMessage = ref('')
 
 const loginIn = () => {
@@ -18,30 +19,29 @@ const loginIn = () => {
     statusMessage.value = 'Identifiant invalide'
   } else {
     error.value = false
-    statusMessage.value = 'Co OK'
+    logOk.value = true
+    statusMessage.value = 'Connexion réussie. Redirection en cours...'
     GlobalStore.userToken.value = 'ABCDEF'
-    console.log(GlobalStore.userToken)
     setTimeout(() => {
       router.push('/')
     }, 1000)
   }
 }
+
+const clearError = () => {
+  error.value = false
+  statusMessage.value = ''
+}
 </script>
 
 <template>
-  <form @submit.prevent="loginIn">
-    <label>
-      Login
-      <input type="text" v-model="login" />
-    </label>
-
-    <label>
-      Password
-      <input type="password" v-model="pw" />
-    </label>
+  <form @submit.prevent="loginIn" v-if="logOk === false">
+    <input type="text" v-model="login" placeholder="Nom d'utilisateur" @input="clearError" />
+    <input type="password" v-model="pw" placeholder="Mot de passe" @input="clearError" />
     <MainButton text="Se connecter" />
-    <StatusMessage :text="statusMessage" :error="error" v-if="statusMessage" />
   </form>
+
+  <StatusMessage :text="statusMessage" :error="error" v-if="statusMessage" />
 </template>
 
 <style scoped>
@@ -61,10 +61,14 @@ label {
 }
 
 input {
-  background-color: var(--light-transparent);
+  background-color: var(--dark-transparent);
   border: 1px solid var(--muted-coral);
   border-radius: var(--main-radius);
   width: 100%;
-  max-width: 200px;
+  min-width: 200px;
+  text-align: center;
+  color: var(--warm-beige);
+  height: 40px;
+  font-size: 1rem;
 }
 </style>
