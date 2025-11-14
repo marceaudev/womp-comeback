@@ -7,6 +7,8 @@
   --muted-coral: #ff6f61;
   --golden-yellow: #daa520;
   --burnt-orange: #ff4500;
+  --error-color: rgb(211, 69, 69);
+  --success-color: rgb(66, 158, 66);
   --light-transparent: rgba(255, 255, 255, 0.1);
   --main-radius: 8px;
   --navbar-height: 60px;

@@ -2,22 +2,28 @@
 import { ref, inject } from 'vue'
 import { useRouter } from 'vue-router'
 import MainButton from './MainButton.vue'
+import StatusMessage from './StatusMessage.vue'
 
 const GlobalStore = inject('GlobalStore')
 const router = useRouter()
 
 const login = ref('')
 const pw = ref('')
-const errorMsg = ref('')
+const error = ref(true)
+const statusMessage = ref('')
 
 const loginIn = () => {
   if (login.value !== 'test' || pw.value !== 'test') {
-    errorMsg.value = 'Identifiant invalide'
+    error.value = true
+    statusMessage.value = 'Identifiant invalide'
   } else {
-    errorMsg.value = 'Co OK'
+    error.value = false
+    statusMessage.value = 'Co OK'
     GlobalStore.userToken.value = 'ABCDEF'
     console.log(GlobalStore.userToken)
-    router.push('/')
+    setTimeout(() => {
+      router.push('/')
+    }, 1000)
   }
 }
 </script>
@@ -34,7 +40,7 @@ const loginIn = () => {
       <input type="password" v-model="pw" />
     </label>
     <MainButton text="Se connecter" />
-    <p>{{ errorMsg }}</p>
+    <StatusMessage :text="statusMessage" :error="error" v-if="statusMessage" />
   </form>
 </template>
 
@@ -42,6 +48,7 @@ const loginIn = () => {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
