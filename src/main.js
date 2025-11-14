@@ -1,15 +1,14 @@
 import './assets/main.css'
 
-import { createApp, ref } from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import { GlobalStore } from './store'
 
 const app = createApp(App)
 
 app.use(router)
 
-const userToken = ref('')
-
-app.provide('GlobalStore', { userToken: userToken })
+app.provide('GlobalStore', GlobalStore)
 
 app.mount('#app')
