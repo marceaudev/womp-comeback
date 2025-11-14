@@ -1,6 +1,7 @@
 <script setup>
 import { ref, inject } from 'vue'
 import { useRouter } from 'vue-router'
+import MainButton from './MainButton.vue'
 
 const GlobalStore = inject('GlobalStore')
 const router = useRouter()
@@ -32,9 +33,31 @@ const loginIn = () => {
       Password
       <input type="password" v-model="pw" />
     </label>
-
-    <button type="submit">Se connecter</button>
-
+    <MainButton text="Se connecter" />
     <p>{{ errorMsg }}</p>
   </form>
 </template>
+
+<style scoped>
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--warm-beige);
+}
+
+input {
+  background-color: var(--light-transparent);
+  border: 1px solid var(--muted-coral);
+  border-radius: var(--main-radius);
+  width: 100%;
+  max-width: 200px;
+}
+</style>
