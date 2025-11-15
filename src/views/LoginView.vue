@@ -5,9 +5,8 @@ import LoginForm from '@/components/LoginForm.vue'
 
 <template>
   <main class="wrapper">
-    <HeroBanner text="Bienvenue sur WOMP" :icon="'womp.png'" />
     <div class="loginForm">
-      <h2>Identification</h2>
+      <HeroBanner text="Identification" />
       <LoginForm />
     </div>
   </main>
@@ -21,6 +20,7 @@ import LoginForm from '@/components/LoginForm.vue'
   display: flex;
   justify-content: center;
   align-items: center;
+  height: var(--page-height);
   max-height: var(--page-height);
   position: relative;
   flex-direction: column;
@@ -28,13 +28,12 @@ import LoginForm from '@/components/LoginForm.vue'
 
 .loginForm {
   background-color: var(--dark-transparent);
-  width: 300px;
-  padding: 20px 0;
+  width: 400px;
+  padding: 20px;
   border-radius: var(--main-radius);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   backdrop-filter: blur(10px);
 }
 

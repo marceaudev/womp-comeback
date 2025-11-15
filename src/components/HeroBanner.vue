@@ -56,6 +56,7 @@ const iconUrl = computed(() => {
   justify-content: center;
   position: relative;
   margin: 20px 0;
+  backdrop-filter: blur(10px);
 }
 
 .infoBloc,
