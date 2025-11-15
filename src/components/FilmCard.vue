@@ -1,8 +1,8 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
 import VanillaTilt from 'vanilla-tilt'
 
-defineProps({
+const props = defineProps({
   film: {
     type: Object,
     required: true,
@@ -11,19 +11,27 @@ defineProps({
 
 const tilt = ref(null)
 onMounted(() => {
-  VanillaTilt.init(tilt.value, {
-    max: 5,
-    speed: 500,
-  })
+  if (tilt.value) {
+    VanillaTilt.init(tilt.value, {
+      max: 5,
+      speed: 500,
+    })
+  }
+})
+
+const posterSrc = computed(() => {
+  return props.film.poster_path
+    ? `https://image.tmdb.org/t/p/w500${props.film.poster_path}`
+    : new URL('../assets/imgs/default.jpg', import.meta.url).href
 })
 </script>
 
 <template>
-  <router-link :to="`/film/${film.id}`">
+  <router-link :to="`/film/${props.film.id}`">
     <div ref="tilt" class="filmCard">
-      <img :src="`https://image.tmdb.org/t/p/w500${film.poster_path}`" :alt="film.title" />
+      <img :src="posterSrc" :alt="props.film.title || 'Image par défaut'" />
       <div class="filmInfo">
-        <h3>{{ film.title }}</h3>
+        <h3>{{ props.film.title }}</h3>
       </div>
     </div>
   </router-link>
