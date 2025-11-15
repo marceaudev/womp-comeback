@@ -14,6 +14,10 @@ const props = defineProps({
     type: String,
     default: null,
   },
+  filmImg: {
+    type: String,
+    default: null,
+  },
 })
 
 const iconUrl = computed(() => {
@@ -35,6 +39,9 @@ const iconUrl = computed(() => {
     <div class="iconBloc" v-if="icon">
       <img :src="iconUrl" alt="Icone" />
     </div>
+    <div class="filmImgBloc" v-if="filmImg">
+      <img :src="filmImg" alt="Film Image" />
+    </div>
   </div>
 </template>
 
@@ -51,7 +58,8 @@ const iconUrl = computed(() => {
   margin: 20px 0;
 }
 
-.infoBloc {
+.infoBloc,
+.filmImgBloc {
   margin-left: 1rem;
   color: var(--warm-beige);
   font-size: 1.5rem;
@@ -69,7 +77,19 @@ span {
   height: 120px;
 }
 
+.filmImgBloc {
+  overflow: hidden;
+  height: 90%;
+  right: 0;
+  border-radius: var(--main-radius);
+}
+
 .iconBloc img {
+  height: 100%;
+  transform: rotate(10deg);
+}
+
+.filmImgBloc img {
   height: 100%;
 }
 </style>

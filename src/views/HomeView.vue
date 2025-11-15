@@ -23,11 +23,7 @@ onMounted(async () => {
 
 <template>
   <main class="wrapper">
-    <HeroBanner
-      :text="'Profitez de notre catalogue à partir de'"
-      :price="9.99"
-      :icon="'popcorn.webp'"
-    />
+    <HeroBanner :text="'Films populaires'" :icon="'flamme.png'" />
     <div>
       <div class="filmGrid">
         <FilmCard v-for="film in films" :key="film.id" :film="film" />

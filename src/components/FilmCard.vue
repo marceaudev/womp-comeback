@@ -8,12 +8,12 @@ defineProps({
 </script>
 
 <template>
-  <div class="filmCard">
+  <router-link :to="`/film/${film.id}`" class="filmCard">
     <img :src="`https://image.tmdb.org/t/p/w500${film.poster_path}`" :alt="film.title" />
     <div class="filmInfo">
       <h3>{{ film.title }}</h3>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <style scoped>

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
+import FilmDetail from '../views/FilmDetail.vue'
 import { GlobalStore } from '../store'
 
 const router = createRouter({
@@ -15,6 +16,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: LoginView,
+    },
+    {
+      path: '/film/:id',
+      name: 'FilmDetail',
+      component: FilmDetail,
     },
   ],
 })
