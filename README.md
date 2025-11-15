@@ -34,3 +34,6 @@ Créer une **page d’accueil style Netflix** avec :
 npm install
 npm run dev
 ```
+## 👁️ Preview
+
+https://wompflix.netlify.app/login
