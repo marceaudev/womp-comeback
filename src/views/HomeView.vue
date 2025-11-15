@@ -1,9 +1,15 @@
 <script setup>
-import HelloWorld from '../components/HelloWorld.vue'
+import HeroBanner from '../components/HeroBanner.vue'
 </script>
 
 <template>
   <main class="wrapper">
-    <HelloWorld msg="Womp" />
+    <HeroBanner
+      :text="'Profitez de notre catalogue à partir de'"
+      :price="9.99"
+      :icon="'popcorn.webp'"
+    />
   </main>
 </template>
+
+<style scoped></style>

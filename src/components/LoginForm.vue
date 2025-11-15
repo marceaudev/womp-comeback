@@ -21,8 +21,8 @@ const loginIn = () => {
     error.value = false
     logOk.value = true
     statusMessage.value = 'Connexion réussie. Redirection en cours...'
-    GlobalStore.userToken.value = 'ABCDEF'
     setTimeout(() => {
+      GlobalStore.userToken.value = 'ABCDEF'
       router.push('/')
     }, 1000)
   }
