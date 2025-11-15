@@ -31,14 +31,11 @@ onMounted(async () => {
 
 <template>
   <main v-if="film" class="wrapper">
-    <HeroBanner
-      :text="film.title"
-      :filmImg="`https://image.tmdb.org/t/p/w500${film.poster_path}`"
-      :icon="'popcorn.png'"
-    />
-
-    <p>{{ film.overview }}</p>
-
+    <HeroBanner :text="film.title" :icon="'popcorn.png'" />
+    <section class="filmDetail">
+      <img :src="`https://image.tmdb.org/t/p/w500${film.poster_path}`" alt="" />
+      <p>{{ film.overview }}</p>
+    </section>
     <div class="trailer">
       <h2>Bande-annonce</h2>
       <div v-if="loadingTrailer" class="loader">Chargement du trailer...</div>
@@ -57,6 +54,18 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+.filmDetail {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.filmDetail img {
+  border-radius: var(--main-radius);
+  max-height: 200px;
+  height: auto;
+}
 p {
   margin: 20px 0;
   line-height: 1.6;

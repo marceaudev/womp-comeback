@@ -5,7 +5,6 @@
   --soft-black: #1c1c1c;
   --warm-beige: #f5e8d8;
   --muted-red: #e41816;
-  --golden-yellow: #daa520;
   --error-color: rgb(211, 69, 69);
   --success-color: rgb(66, 158, 66);
   --light-transparent: rgba(255, 255, 255, 0.1);
@@ -17,7 +16,7 @@
 
 .wrapper {
   max-width: 1050px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   padding: 0 20px;
 }
 

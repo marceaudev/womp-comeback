@@ -14,10 +14,6 @@ const props = defineProps({
     type: String,
     default: null,
   },
-  filmImg: {
-    type: String,
-    default: null,
-  },
 })
 
 const iconUrl = computed(() => {
@@ -38,9 +34,6 @@ const iconUrl = computed(() => {
     </div>
     <div class="iconBloc" v-if="icon">
       <img :src="iconUrl" alt="Icone" />
-    </div>
-    <div class="filmImgBloc" v-if="filmImg">
-      <img :src="filmImg" alt="Film Image" />
     </div>
   </div>
 </template>
