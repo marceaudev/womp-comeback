@@ -62,7 +62,6 @@ label {
 
 input {
   background-color: var(--dark-transparent);
-  border: 1px solid var(--muted-coral);
   border-radius: var(--main-radius);
   width: 100%;
   min-width: 200px;
@@ -70,5 +69,6 @@ input {
   color: var(--warm-beige);
   height: 40px;
   font-size: 1rem;
+  border: none;
 }
 </style>

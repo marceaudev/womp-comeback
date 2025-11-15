@@ -1,9 +1,11 @@
 <script setup>
+import HeroBanner from '@/components/HeroBanner.vue'
 import LoginForm from '@/components/LoginForm.vue'
 </script>
 
 <template>
   <main class="wrapper">
+    <HeroBanner text="Bienvenue sur WOMP" :icon="'womp.png'" />
     <div class="loginForm">
       <h2>Identification</h2>
       <LoginForm />
@@ -19,8 +21,9 @@ import LoginForm from '@/components/LoginForm.vue'
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--page-height);
+  max-height: var(--page-height);
   position: relative;
+  flex-direction: column;
 }
 
 .loginForm {

@@ -18,7 +18,7 @@ defineProps({
 <style scoped>
 button {
   padding: 10px 20px;
-  background-color: var(--muted-coral);
+  background-color: var(--muted-red);
   color: var(--soft-black);
   border: none;
   border-radius: var(--main-radius);
@@ -28,6 +28,6 @@ button {
 }
 
 .logout {
-  background-color: var(--burnt-orange);
+  background-color: var(--muted-red);
 }
 </style>

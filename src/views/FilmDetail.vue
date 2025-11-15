@@ -29,7 +29,7 @@ onMounted(async () => {
     <HeroBanner
       :text="film.title"
       :filmImg="`https://image.tmdb.org/t/p/w500${film.poster_path}`"
-      :icon="'popcorn.webp'"
+      :icon="'popcorn.png'"
     />
     <p>{{ film.overview }}</p>
     <div v-if="trailer" class="trailer">

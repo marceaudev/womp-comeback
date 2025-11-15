@@ -67,14 +67,14 @@ const iconUrl = computed(() => {
 }
 
 span {
-  color: var(--muted-coral);
+  color: var(--muted-red);
 }
 
 .iconBloc {
   position: absolute;
   z-index: 1;
-  right: 0;
-  height: 120px;
+  right: 20px;
+  height: 80px;
 }
 
 .filmImgBloc {
@@ -86,7 +86,6 @@ span {
 
 .iconBloc img {
   height: 100%;
-  transform: rotate(10deg);
 }
 
 .filmImgBloc img {
