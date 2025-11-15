@@ -16,7 +16,7 @@ Pas d’ambition folle, juste un retour tranquille.
 ## 🧩 Stack technique
 
 - **Vue.js** — pour construire une interface front moderne et agréable
-- **OMDb API** — pour récupérer des informations (films, synopsis, images…)
+- **TMDb API** — pour récupérer des informations (films, synopsis, images…)
 - **CSS** (ou Tailwind/Sass, selon la suite) — pour reproduire une esthétique “Netflix-like”
 
 ## 🎨 Objectif

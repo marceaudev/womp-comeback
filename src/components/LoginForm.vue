@@ -7,8 +7,8 @@ import StatusMessage from './StatusMessage.vue'
 const GlobalStore = inject('GlobalStore')
 const router = useRouter()
 
-const login = ref('')
-const pw = ref('')
+const login = ref('test')
+const pw = ref('test')
 const error = ref(false)
 const logOk = ref(false)
 const statusMessage = ref('')

@@ -34,6 +34,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: var(--warm-beige);
+  padding: 0 2rem;
 }
 
 .logo img {
