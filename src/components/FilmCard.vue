@@ -1,17 +1,30 @@
 <script setup>
+import { onMounted, ref } from 'vue'
+import VanillaTilt from 'vanilla-tilt'
+
 defineProps({
   film: {
     type: Object,
     required: true,
   },
 })
+
+const tilt = ref(null)
+onMounted(() => {
+  VanillaTilt.init(tilt.value, {
+    max: 5,
+    speed: 500,
+  })
+})
 </script>
 
 <template>
-  <router-link :to="`/film/${film.id}`" class="filmCard">
-    <img :src="`https://image.tmdb.org/t/p/w500${film.poster_path}`" :alt="film.title" />
-    <div class="filmInfo">
-      <h3>{{ film.title }}</h3>
+  <router-link :to="`/film/${film.id}`">
+    <div ref="tilt" class="filmCard">
+      <img :src="`https://image.tmdb.org/t/p/w500${film.poster_path}`" :alt="film.title" />
+      <div class="filmInfo">
+        <h3>{{ film.title }}</h3>
+      </div>
     </div>
   </router-link>
 </template>
@@ -26,6 +39,7 @@ defineProps({
   position: relative;
   overflow: hidden;
   border-radius: var(--main-radius);
+  height: 100%;
 }
 
 .filmCard:hover {
